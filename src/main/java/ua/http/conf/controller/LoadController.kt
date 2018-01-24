@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
 @Controller
-class PlainController {
+class LoadController {
 
     @RequestMapping(method = [(RequestMethod.GET)], value = ["/load_1"])
     fun load1(req: HttpServletRequest, resp: HttpServletResponse): ModelAndView {
@@ -44,22 +44,22 @@ class PlainController {
         return ModelAndView("load6")
     }
 
-    @RequestMapping(method = [(RequestMethod.GET)], value = ["/sample7"])
+    @RequestMapping(method = [(RequestMethod.GET)], value = ["/push"])
     fun sample2(req: HttpServletRequest, resp: HttpServletResponse): ModelAndView {
         val pushBuilder = req.newPushBuilder()
+        HttpURLConnection
         pushBuilder?.apply {
             pushBuilder.path("res/images/logo.png").push()
             pushBuilder.path("res/images/background.jpg").push()
             pushBuilder.path("res/images/header_1.jpg").push()
 
 
-            for (i in 1..400) {
+            for (i in 1..250) {
                 pushBuilder
                         .path("res/images/space/space_$i.jpg")
                         .addHeader("content-type", "image/jpg")
                         .push()
             }
-            pushBuilder.path("res/css/style.css").push()
         }
         return ModelAndView("sample2")
     }

@@ -45,6 +45,10 @@
 <script src="res/js/jquery.sharrre.min.js"></script>
 
 
+<img src="res/images/tiger.jpg"/>
+<img src="res/images/background.jpg"/>
+<img src="res/images/1.jpg"/>
+
 <c:forEach var="i" begin="1" end="400">
     <img id="test-image" src="res/images/space/space_${i}.jpg">
 </c:forEach>
