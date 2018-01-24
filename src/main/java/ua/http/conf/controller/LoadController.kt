@@ -47,7 +47,6 @@ class LoadController {
     @RequestMapping(method = [(RequestMethod.GET)], value = ["/push"])
     fun sample2(req: HttpServletRequest, resp: HttpServletResponse): ModelAndView {
         val pushBuilder = req.newPushBuilder()
-        HttpURLConnection
         pushBuilder?.apply {
             pushBuilder.path("res/images/logo.png").push()
             pushBuilder.path("res/images/background.jpg").push()
