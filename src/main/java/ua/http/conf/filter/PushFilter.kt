@@ -16,10 +16,10 @@ class PushFilter : Filter {
 //
 //        when (requestURI) {
 //            "index.html" -> {
-//                pushBuilder.path("/style.css").push()
-//                pushBuilder.path("/logo.png").push()
+//                pushBuilder?.path("res/style.css")?.push()
+//                pushBuilder?.path("res/images/tiger.jpg")?.push()
 //            }
-//            else -> pushBuilder.path("/nature.png").push()
+//            else -> pushBuilder?.path("/nature.png")?.push()
 //        }
         chain.doFilter(req, resp)
     }

@@ -1,5 +1,5 @@
 package ua.http.conf.client
-import jdk.incubator.http.HttpClient
+/*import jdk.incubator.http.HttpClient
 import jdk.incubator.http.HttpRequest
 import jdk.incubator.http.HttpResponse
 import java.net.URI
@@ -26,4 +26,4 @@ object HttpClientSample {
 
         val response1: CompletableFuture<HttpResponse<String>> = client.sendAsync(request, HttpResponse.BodyHandler.asString())
     }
-}
+}*/
